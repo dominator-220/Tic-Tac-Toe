@@ -131,7 +131,7 @@ function clear(){
     person2.name="";
     person2.link="";
     finalresult.innerText=``;
-    finalresult.display="none";
+    finalresult.style.display="none";
     ai.name="";
     ai.link="";
     if (lastmine!=""){

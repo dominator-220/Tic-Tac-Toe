@@ -3,7 +3,7 @@
     #parent{
         
         
-        background-image:url("container.jpg");
+        background-image:url("images/container.jpg");
         background-repeat: no-repeat;
         background-size:100%;
         background-position-x: 40%;
@@ -44,7 +44,7 @@
     
     .container > div {
       display:flex;
-      background-image:url("game-background.jpg");
+      background-image:url("images/game-background.jpg");
       background-repeat: no-repeat;
       background-size:200%;
     
@@ -136,7 +136,7 @@
     .char1,.char2,.char3,.char4{
        height: 150px;
        width:150px;
-       background-image:url("game-background.jpg");
+       background-image:url("images/game-background.jpg");
 
        background-repeat: no-repeat;
        background-size:180%;
@@ -180,7 +180,7 @@
     .char5,.char6,.char7,.char8{
        height: 150px;
        width:150px;
-       background-image:url("game-background.jpg");
+       background-image:url("images/game-background.jpg");
 
        background-repeat: no-repeat;
        background-size:180%;
