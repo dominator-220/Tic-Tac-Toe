@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <header>
+    <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
 
     <style>
+    
         #parent{
+            
             
             background-image:url("container.jpg");
             background-repeat: no-repeat;
@@ -26,6 +29,7 @@
         }
         .container{
             
+    
             position:relative;
             margin-left: 32%;
             margin-right:100px;
@@ -48,7 +52,7 @@
           background-repeat: no-repeat;
           background-size:200%;
         
-          font-size:  37px;
+          font-size:  1px;
           height:120px;
           width:120px;
           border:2px solid;
@@ -59,26 +63,323 @@
           
         }
         #play{
+            font-family: 'Akaya Kanadaka';
+            display:none;
             height: 100px;
             width: 500px;
             margin-top:150px;
             margin-left:270px;
+            font-size: 30px;
+            background: linear-gradient(54.7deg, #0ad8c7 12%,#960ead 100%);
             
 
+
         }
+
+        .dropdown {
+            font-family: 'Akaya Kanadaka';
+           
+        
+            position: absolute;
+            top: 350px;
+            left: 25px;
+            display: inline-block;
+            
+            
+        }
+        .dropbtn{
+            font-family: 'Akaya Kanadaka';
+            font-size: 20px;
+            width: 300px;
+            height: 50px;
+            background-color: rgb(250, 234, 14);
+        }
+
+        .dropdown-content {
+            font-family: 'Akaya Kanadaka';
+           
+        
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            
+            z-index: 1;
+        }
+
+        .dropdown-content button {
+            font-family: 'Akaya Kanadaka';
+            font-size: 30px;
+
+            width: 300px;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #e71fc6;}
+        #twoplayer{
+             
+            position: absolute;
+            top: 350px;;
+            right: 45px;
+            height: 50px;
+            width: 300px;
+            background-color: aqua;
+            font-family: 'Akaya Kanadaka';
+            font-size: 20px;
+
+        }
+        
+        .char1,.char2,.char3,.char4{
+           height: 150px;
+           width:150px;
+           background-image:url("game-background.jpg");
+
+           background-repeat: no-repeat;
+           background-size:180%;
+           outline: 2px solid black;
+           
+
+        }
+        .char1:hover,.char2:hover,.char3:hover,.char4:hover{
+           transform:scale(1.1);
+           z-index: 1;
+           
+        }
+     
+        .char1{
+            position:fixed;
+            top:308px;
+            left:450px;
+
+
+        }
+        .char2{
+            position: fixed;
+            left: 605px;
+            top:308px;
+
+        }
+        .char3{
+            position:fixed;
+            top:463px;
+            left:450px;
+
+
+        }
+        .char4{
+            position: fixed;
+            left: 605px;
+            top:463px;
+
+        }
+
+        .char5,.char6,.char7,.char8{
+           height: 150px;
+           width:150px;
+           background-image:url("game-background.jpg");
+
+           background-repeat: no-repeat;
+           background-size:180%;
+           outline: 2px solid black;
+
+        }
+
+        .char5:hover,.char6:hover,.char7:hover,.char8:hover{
+           transform:scale(1.1);
+           z-index: 1;
+           
+        }
+
+        .char5{
+            position:fixed;
+            top:308px;
+            left:1040px;
+
+
+        }
+        .char6{
+            position: fixed;
+            left: 1195px;
+            top:308px;
+
+        }
+        .char7{
+            position:fixed;
+            top:463px;
+            left:1040px;
+
+
+        }
+        .char8{
+            position: fixed;
+            left: 1195px;
+            top:463px;
+
+        }
+        .imgchar{
+            height: 120px;
+            width: 120px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .ingameimgchar{
+            height: 100px;
+            width: 100px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        #wait1{
+            font-family: 'Akaya Kanadaka';
+            position: fixed;
+            font-size:30px;
+            top:665px;
+            margin-left:130px;
+            color: white;
+        }
+        #wait2{
+            font-family: 'Akaya Kanadaka';
+            position: fixed;
+            font-size:30px;
+            left: 1140px;
+            top: 665px;
+         
+            color: white;
+        }
+        #info{
+            position:fixed;
+            font-family: 'Akaya Kanadaka';
+    
+            font-size:60px;
+            left:440px;
+            color:rgb(240, 223, 235);
+        }
+
+        #superparent{
+            background: rgba(40, 46, 59, 0.966);
+            width:100%;
+            
+        }
+        body{
+            background-color: rgba(40, 46, 59, 0.966);
+        }
+        #title{
+            top: 20px;
+            position:fixed;
+            font-family: 'Akaya Kanadaka';
+            animation: glow 1s ease-in-out infinite alternate;
+            color: #fff;
+    
+            font-size:50px;
+    
+        }
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+        
+    
         </style>
+        
 
 </header>
+<title>
+    Tic Tac Toe
+</title>
 <body>
+<h1 id="title">
+    Tic Tac Toe
+</h1>
+<div id="superparent">
 <div id="parent">
+    <div id="info">
+        Choose Your Character
+    </div>
+    <div id="character">
+        <div id="Ironman" class="char1" onclick="myassign(this)">
+            <img src="ironman1.png" class="imgchar"></img>
+
+        </div>
+        <div id="Thanos" class="char2" onclick="myassign(this)">
+            <img src="thanos.png" class="imgchar"></img>
+
+        </div>
+        <div id="Blackpanther" class="char3" onclick="myassign(this)">
+            <img src="blackpanther.png" class="imgchar"></img>
+
+        </div>
+        <div id="CaptainAmerica" class="char4" onclick="myassign(this)">
+            <img src="captainamerica.png" class="imgchar"></img>
+
+        </div>
+        <div id="wait1">
+            Player1
+        </div>
+
+    </div>
+
+    <div id="opponentcharacter">
+        <div id="Thor" class="char5" onclick="opponentassign(this)">
+            <img src="thor.png" class="imgchar"></img>
+
+        </div>
+        <div id="Hulk" class="char6" onclick="opponentassign(this)">
+            <img src="hulk.png" class="imgchar"></img>
+
+        </div>
+        <div id="Dr Strange" class="char7" onclick="opponentassign(this)">
+            <img src="strange.png" class="imgchar"></img>
+
+        </div>
+        <div id="Loki" class="char8" onclick="opponentassign(this)">
+            <img src="loki.png" class="imgchar"></img>
+
+        </div>
+        <div id="wait2">
+            Player2
+        </div>
+
+    </div>
+
+
     <div id="gamearea" class="container">
 
-</div>
+    </div>
+
 <button id="play">
     Play Again
 </button>
 
+</div>
+</div>
+<div id="choice">
+    <button id="twoplayer">
+        Player vs Player
+    </button>
+    <div class="dropdown">
+        <button class="dropbtn">Player vs AI </button>
+        <div class="dropdown-content">
+        <button id="easy">Easy</button>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
+        <button id="invincible">Invincible</button>
+        </div>
 
+
+
+    </div>
 </div>
 
 </body>
