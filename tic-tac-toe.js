@@ -15,6 +15,7 @@ let row2=[3,4,5];
 let row3=[6,7,8];
 let diag1=[0,4,8];
 let diag2=[2,4,6];
+let finalresult=document.querySelector("#winner");
 
 let configuration=[col1,col2,col3,row1,row2,row3,diag1,diag2];
 let twoplayer=document.querySelector("#twoplayer");
@@ -78,6 +79,8 @@ function add(){
         if (moves%2){
             if (check()){
                 alert(`Winner ${person1.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person1.name}`;
                 result.style.display="block";
     
 
@@ -86,6 +89,8 @@ function add(){
         else{
             if (check()){
                 alert(`Winner ${person2.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person2.name}`;
                 result.style.display="block";
         
 
@@ -95,6 +100,8 @@ function add(){
         if (moves==9 & (!check()))
         {
             alert(`Draw`);
+            finalresult.style.display="flex";
+            finalresult.innerText=`Draw`;
             result.style.display="block";
 
 
@@ -123,6 +130,8 @@ function clear(){
     person1.link="";
     person2.name="";
     person2.link="";
+    finalresult.innerText=``;
+    finalresult.display="none";
     ai.name="";
     ai.link="";
     if (lastmine!=""){
@@ -292,6 +301,8 @@ function easyai(){
             moves++;
             if(check()){
                 alert(`Winner ${person1.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person1.name}`;
                 result.style.display="block";
                 return
         
@@ -301,6 +312,8 @@ function easyai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -325,6 +338,8 @@ function easyai(){
             moves++;
             if(check()){
                 alert(`Winner ${ai.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${ai.name}`;
                 result.style.display="block";
                 return
         
@@ -333,6 +348,8 @@ function easyai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -360,6 +377,8 @@ function mediumai(){
             moves++;
             if(check()){
                 alert(`Winner ${person1.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person1.name}`;
                 result.style.display="block";
                 return
         
@@ -369,6 +388,8 @@ function mediumai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -395,6 +416,8 @@ function mediumai(){
                     child[arr[i]].appendChild(img1);
                   
                     alert(`Winner ${ai.name}`);
+                    finalresult.innerText=`Winner ${ai.name}`;
+                    finalresult.style.display="flex";
                     result.style.display="block";
                     
                     moves++;
@@ -419,6 +442,8 @@ function mediumai(){
             moves++;
             if(check()){
                 alert(`Winner ${ai.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${ai.name}`;
                 result.style.display="block";
                 return
         
@@ -427,6 +452,8 @@ function mediumai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -454,6 +481,8 @@ function hardai(){
             moves++;
             if(check()){
                 alert(`Winner ${person1.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person1.name}`;
                 result.style.display="block";
                 return
         
@@ -463,6 +492,8 @@ function hardai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -487,6 +518,8 @@ function hardai(){
                     child[arr[i]].appendChild(img1);
                   
                     alert(`Winner ${ai.name}`);
+                    finalresult.style.display="flex";
+                    finalresult.innerText=`Winner ${ai.name}`;
                     result.style.display="block";
                     
                     moves++;
@@ -533,6 +566,8 @@ function hardai(){
             moves++;
             if(check()){
                 alert(`Winner ${ai.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${ai.name}`;
                 result.style.display="block";
                 return
         
@@ -541,6 +576,8 @@ function hardai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
@@ -572,7 +609,10 @@ function invincibleai(){
             div.appendChild(img);
             moves++;
             if(check()){
+
                 alert(`Winner ${person1.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${person1.name}`;
                 result.style.display="block";
                 return
         
@@ -580,8 +620,11 @@ function invincibleai(){
             }
             
             if (moves==9 & (!check()))
-            {
+            {   
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
+            
                 result.style.display="block";
                 return
     
@@ -616,6 +659,8 @@ function invincibleai(){
             moves++;
             if(check()){
                 alert(`Winner ${ai.name}`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Winner ${ai.name}`;
                 result.style.display="block";
                 return
         
@@ -624,6 +669,8 @@ function invincibleai(){
             if (moves==9 & (!check()))
             {
                 alert(`Draw`);
+                finalresult.style.display="flex";
+                finalresult.innerText=`Draw`;
                 result.style.display="block";
                 return
     
